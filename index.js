@@ -3,21 +3,11 @@ const cors = require('cors');
 const fs = require('fs');
 const path = require('path');
 
-const PORT = process.env.PORT || 3003;
+const PORT = process.env.PORT || 3005;
 
 const app = express();
 
-app.use(cors());
-app.use(express.json());
-app.use(express.urlencoded());
 
-const fileDB = path.join(__dirname, './', 'db', 'artists.js');
-
-const artists = fs.readFileSync(fileDB, 'utf-8');
-
-app.get('/', (req, res) => res.send('Hello from API'));
-
-app.get('/artists', (req, res) => res.send(artists));
 
 app.get('/artists/:id', (req, res) => {
 	let artist = artists.find((artist) => artist.id == req.params.id);
@@ -36,21 +26,22 @@ app.post('/artists', (req, res) => {
 app.put('/artists/:id', (req, res) => {
 	let artist = artists.find((artist) => artist.id == req.params.id);
 	artist.name = req.body.name;
-	// res.sendStatus(200);
-	res.send(artist);
-});
 
-app.delete('/artists/:id', (req, res) => {
-	artists = artists.filter((artist) => {
-		artist.id !== Number(req.params.id);
-	});
-	res.sendStatus(200);
-});
 
-app.listen(PORT, () => {
-	console.log('API app started!');
-});
+	app.put('/artists/:id', (req, res) => {
+	let artist = artists.find((artist) => artist.id == req.params.id);
+		artist.name = req.body.name;
+		
 
-//heroku cli
-//heroku create
-//
+
+
+		app.put('/artists/:id', (req, res) => {
+	let artist = artists.find((artist) => artist.id == req.params.id);
+			artist.name = req.body.name;
+			
+
+
+
+			app.put('/artists/:id', (req, res) => {
+	let artist = artists.find((artist) => artist.id == req.params.id);
+	artist.name = req.body.name;
