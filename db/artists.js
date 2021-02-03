@@ -5,7 +5,7 @@
         },
         {
             id: 2,
-            name: 'Mozart',
+            name: 'Mozartooooo',
         },
         {
             id: 3,
