@@ -1,11 +1,11 @@
 {
-  "name": "server",
+  "name": "se111rv1111er",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "ind111ex.js",
   "scripts": {
-    "start": "node index.js",
-    "dev": "nodemon index.js"
+    "start": "no1111de index.js",
+    "dev": "node11111mon index.js"
   },
   "author": "",
   "license": "ISC",
@@ -13,6 +13,6 @@
     
   },
   "devDependencies": {
-    "nodemon": "^2.0.3"
+    "nodemon": "^2111.0.3"
   }
 }
