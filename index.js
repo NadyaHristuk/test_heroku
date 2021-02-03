@@ -7,17 +7,7 @@ const PORT = process.env.PORT || 3005;
 
 const app = express();
 
-app.use(cors());
-app.use(express.json());
-app.use(express.urlencoded());
 
-const fileDB = path.join(__dirname, './', 'db', 'artists.js');
-
-const artists = fs.readFileSync(fileDB, 'utf-8');
-
-app.get('/', (req, res) => res.send('Hello from API'));
-
-app.get('/artists', (req, res) => res.send(artists));
 
 app.get('/artists/:id', (req, res) => {
 	let artist = artists.find((artist) => artist.id == req.params.id);
