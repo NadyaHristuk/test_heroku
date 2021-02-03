@@ -36,21 +36,22 @@ app.post('/artists', (req, res) => {
 app.put('/artists/:id', (req, res) => {
 	let artist = artists.find((artist) => artist.id == req.params.id);
 	artist.name = req.body.name;
-	// res.sendStatus(200);
-	res.send(artist);
-});
 
-app.delete('/artists/:id', (req, res) => {
-	artists = artists.filter((artist) => {
-		artist.id !== Number(req.params.id);
-	});
-	res.sendStatus(200);
-});
 
-app.listen(PORT, () => {
-	console.log('API app started!');
-});
+	app.put('/artists/:id', (req, res) => {
+	let artist = artists.find((artist) => artist.id == req.params.id);
+		artist.name = req.body.name;
+		
 
-//heroku cli
-//heroku create
-//
+
+
+		app.put('/artists/:id', (req, res) => {
+	let artist = artists.find((artist) => artist.id == req.params.id);
+			artist.name = req.body.name;
+			
+
+
+
+			app.put('/artists/:id', (req, res) => {
+	let artist = artists.find((artist) => artist.id == req.params.id);
+	artist.name = req.body.name;
